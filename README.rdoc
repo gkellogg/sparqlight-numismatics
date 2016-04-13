@@ -31,7 +31,6 @@ Create the following:
 * `app/models/search_builder.rb` (FIXME: can this come from sparqlight gem?)
 * `app/models/sparql_document.rb` (FIXME: can this come from sparqlight gem?)
 * `app/models/sparql_document.rb` (FIXME: can this come from sparqlight gem?)
-* `app/models/sparql_document.rb`
 
 In `config/routes.db`, replace `:solr_documents` with `:sparql_documents`.
 
