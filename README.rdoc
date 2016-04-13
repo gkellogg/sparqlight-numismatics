@@ -1,0 +1,43 @@
+== README
+
+This is a SPARQLight version of Blacklight. Created using the following:
+
+    rails new numismatics
+
+Add the following to the end of the Gemfile:
+
+    gem 'blacklight', "~> 6.0"
+    gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
+    gem 'sparqlight', "~> 0.0"
+
+If using the built-in SPARQL store, add the following to the Gemfile:
+
+    gem 'sparql', '~> 1.99'
+    gem 'rdf-mongo', '~> 1.99'
+    gem 'rdf-turtle', '~> 1.99'
+
+Then run the following:
+
+    bundle install
+    rails generate blacklight:install
+
+Create the following:
+
+* `app/controllers/catalog_controller.rb`,
+* `config/blacklight.yml` 
+* `db/nomisma-full.ttl`
+* `db/seeds.rb`
+* `app/helpers/application_helper.rb`
+* `app/models/search_builder.rb` (FIXME: can this come from sparqlight gem?)
+* `app/models/sparql_document.rb` (FIXME: can this come from sparqlight gem?)
+* `app/models/sparql_document.rb` (FIXME: can this come from sparqlight gem?)
+* `app/models/sparql_document.rb`
+
+In `config/routes.db`, replace `:solr_documents` with `:sparql_documents`.
+
+Run your database migrations to create Blacklight's database tables:
+
+    rake db:migrate
+
+If using the default built-in SPARQL store, create the default dataset
+    rake db:seed
