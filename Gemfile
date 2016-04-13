@@ -49,10 +49,9 @@ gem 'blacklight', "~> 6.0"
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 gem 'sparqlight', github: "sul-dlss/sparqlight", branch: "feature/as-gem"
 
-gem 'sparql', '~> 1.99'
-gem 'rdf-mongo', '~> 1.99'
-gem 'bson_ext'
-gem 'rdf-turtle', '~> 1.99'
+gem 'sparql', '~> 2.0'
+gem 'rdf-mongo', '~> 2.0'
+gem 'rdf-turtle', '~> 2.0'
 
 group :development, :test do
   gem 'solr_wrapper', '>= 0.3'
